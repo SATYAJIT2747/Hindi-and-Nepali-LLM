@@ -1,0 +1,120 @@
+﻿================================================================================
+SOFT TRAINING (NEPALI)
+================================================================================
+Learning rate       : 2e-05
+Epochs              : 3
+First-token weight  : 3.0
+Weight decay        : 0.01
+Batch size          : 32
+Device              : cuda
+Tokenizer           : c:\Users\satya\Desktop\LMA_PROJ\phase3\nepali\data\nepali_bpe_32000.model
+Base Checkpoint     : c:\Users\satya\Desktop\LMA_PROJ\phase3\nepali\data\nepali_gpt.pt
+
+Tokenizer loaded.
+EOS ID: 2
+PAD ID: 3
+
+Dataset:
+Train samples: 30,000
+Val samples  : 3,000
+
+Loading base checkpoint from c:\Users\satya\Desktop\LMA_PROJ\phase3\nepali\data\nepali_gpt.pt...
+[OK] Loaded base checkpoint with 24,918,528 parameters.
+================================================================================
+STARTING NEPALI SOFT TRAINING
+================================================================================
+Epoch 1 | Step 50/2814 | Train Loss: 6.7024 | LR: 5.95e-06 | Elapsed: 3s
+Epoch 1 | Step 100/2814 | Train Loss: 3.1657 | LR: 1.19e-05 | Elapsed: 5s
+Epoch 1 | Step 150/2814 | Train Loss: 1.8211 | LR: 1.79e-05 | Elapsed: 8s
+Epoch 1 | Step 200/2814 | Train Loss: 1.3111 | LR: 2.00e-05 | Elapsed: 10s
+Epoch 1 | Step 250/2814 | Train Loss: 1.0773 | LR: 2.00e-05 | Elapsed: 12s
+Epoch 1 | Step 300/2814 | Train Loss: 0.9576 | LR: 1.99e-05 | Elapsed: 15s
+
+[EVAL] Step 300 | Val Loss: 0.4930 | Val PPL: 1.64 | Reasoning Acc: 66.00% | First-Token Acc: 66.00%
+Task-wise: compare_2way=54.2%, bind_value_to_entity=100.0%, compare_3way=41.7%, compare_4way=18.6%, equality=100.0%, bind_entity_to_value=91.2%
+>>> New best checkpoint saved (Reasoning Acc: 66.00%)
+Epoch 1 | Step 350/2814 | Train Loss: 0.9276 | LR: 1.98e-05 | Elapsed: 28s
+Epoch 1 | Step 400/2814 | Train Loss: 0.8294 | LR: 1.96e-05 | Elapsed: 30s
+Epoch 1 | Step 450/2814 | Train Loss: 0.7339 | LR: 1.94e-05 | Elapsed: 33s
+Epoch 1 | Step 500/2814 | Train Loss: 0.7429 | LR: 1.92e-05 | Elapsed: 35s
+Epoch 1 | Step 550/2814 | Train Loss: 0.7040 | LR: 1.90e-05 | Elapsed: 38s
+Epoch 1 | Step 600/2814 | Train Loss: 0.6577 | LR: 1.87e-05 | Elapsed: 40s
+
+[EVAL] Step 600 | Val Loss: 0.3134 | Val PPL: 1.37 | Reasoning Acc: 74.83% | First-Token Acc: 74.83%
+Task-wise: compare_2way=72.5%, bind_value_to_entity=100.0%, compare_3way=46.8%, compare_4way=35.6%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 74.83%)
+Epoch 1 | Step 650/2814 | Train Loss: 0.6392 | LR: 1.84e-05 | Elapsed: 52s
+Epoch 1 | Step 700/2814 | Train Loss: 0.6119 | LR: 1.81e-05 | Elapsed: 54s
+Epoch 1 | Step 750/2814 | Train Loss: 0.5807 | LR: 1.77e-05 | Elapsed: 57s
+Epoch 1 | Step 800/2814 | Train Loss: 0.5603 | LR: 1.73e-05 | Elapsed: 59s
+Epoch 1 | Step 850/2814 | Train Loss: 0.4822 | LR: 1.69e-05 | Elapsed: 61s
+Epoch 1 | Step 900/2814 | Train Loss: 0.4205 | LR: 1.65e-05 | Elapsed: 64s
+
+[EVAL] Step 900 | Val Loss: 0.1679 | Val PPL: 1.18 | Reasoning Acc: 91.00% | First-Token Acc: 91.00%
+Task-wise: compare_2way=93.7%, bind_value_to_entity=100.0%, compare_3way=82.7%, compare_4way=64.4%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 91.00%)
+Epoch 2 | Step 950/2814 | Train Loss: 0.3779 | LR: 1.60e-05 | Elapsed: 77s
+Epoch 2 | Step 1000/2814 | Train Loss: 0.3612 | LR: 1.55e-05 | Elapsed: 79s
+Epoch 2 | Step 1050/2814 | Train Loss: 0.3383 | LR: 1.50e-05 | Elapsed: 81s
+Epoch 2 | Step 1100/2814 | Train Loss: 0.3266 | LR: 1.45e-05 | Elapsed: 84s
+Epoch 2 | Step 1150/2814 | Train Loss: 0.2838 | LR: 1.39e-05 | Elapsed: 86s
+Epoch 2 | Step 1200/2814 | Train Loss: 0.2796 | LR: 1.34e-05 | Elapsed: 89s
+
+[EVAL] Step 1200 | Val Loss: 0.1057 | Val PPL: 1.11 | Reasoning Acc: 94.33% | First-Token Acc: 94.33%
+Task-wise: compare_2way=99.3%, bind_value_to_entity=97.9%, compare_3way=87.1%, compare_4way=78.0%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 94.33%)
+Epoch 2 | Step 1250/2814 | Train Loss: 0.2902 | LR: 1.28e-05 | Elapsed: 101s
+Epoch 2 | Step 1300/2814 | Train Loss: 0.2472 | LR: 1.22e-05 | Elapsed: 103s
+Epoch 2 | Step 1350/2814 | Train Loss: 0.2607 | LR: 1.17e-05 | Elapsed: 106s
+Epoch 2 | Step 1400/2814 | Train Loss: 0.2204 | LR: 1.11e-05 | Elapsed: 108s
+Epoch 2 | Step 1450/2814 | Train Loss: 0.2200 | LR: 1.05e-05 | Elapsed: 110s
+Epoch 2 | Step 1500/2814 | Train Loss: 0.1941 | LR: 9.89e-06 | Elapsed: 113s
+
+[EVAL] Step 1500 | Val Loss: 0.0655 | Val PPL: 1.07 | Reasoning Acc: 96.17% | First-Token Acc: 96.17%
+Task-wise: compare_2way=98.6%, bind_value_to_entity=97.9%, compare_3way=93.5%, compare_4way=83.1%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 96.17%)
+Epoch 2 | Step 1550/2814 | Train Loss: 0.1878 | LR: 9.30e-06 | Elapsed: 125s
+Epoch 2 | Step 1600/2814 | Train Loss: 0.1939 | LR: 8.71e-06 | Elapsed: 128s
+Epoch 2 | Step 1650/2814 | Train Loss: 0.1749 | LR: 8.12e-06 | Elapsed: 130s
+Epoch 2 | Step 1700/2814 | Train Loss: 0.1746 | LR: 7.54e-06 | Elapsed: 133s
+Epoch 2 | Step 1750/2814 | Train Loss: 0.1516 | LR: 6.97e-06 | Elapsed: 135s
+Epoch 2 | Step 1800/2814 | Train Loss: 0.1778 | LR: 6.41e-06 | Elapsed: 137s
+
+[EVAL] Step 1800 | Val Loss: 0.0636 | Val PPL: 1.07 | Reasoning Acc: 97.33% | First-Token Acc: 97.33%
+Task-wise: compare_2way=99.3%, bind_value_to_entity=100.0%, compare_3way=92.8%, compare_4way=91.5%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 97.33%)
+Epoch 2 | Step 1850/2814 | Train Loss: 0.1384 | LR: 5.87e-06 | Elapsed: 150s
+Epoch 3 | Step 1900/2814 | Train Loss: 0.1627 | LR: 5.33e-06 | Elapsed: 152s
+Epoch 3 | Step 1950/2814 | Train Loss: 0.1532 | LR: 4.82e-06 | Elapsed: 155s
+Epoch 3 | Step 2000/2814 | Train Loss: 0.1190 | LR: 4.32e-06 | Elapsed: 157s
+Epoch 3 | Step 2050/2814 | Train Loss: 0.1260 | LR: 3.84e-06 | Elapsed: 160s
+Epoch 3 | Step 2100/2814 | Train Loss: 0.1539 | LR: 3.38e-06 | Elapsed: 162s
+
+[EVAL] Step 2100 | Val Loss: 0.0430 | Val PPL: 1.04 | Reasoning Acc: 97.33% | First-Token Acc: 97.33%
+Task-wise: compare_2way=97.9%, bind_value_to_entity=100.0%, compare_3way=95.0%, compare_4way=89.8%, equality=100.0%, bind_entity_to_value=100.0%
+[Patience] 1/5 evals without accuracy improvement.
+Epoch 3 | Step 2150/2814 | Train Loss: 0.1231 | LR: 2.95e-06 | Elapsed: 175s
+Epoch 3 | Step 2200/2814 | Train Loss: 0.1215 | LR: 2.54e-06 | Elapsed: 178s
+Epoch 3 | Step 2250/2814 | Train Loss: 0.1285 | LR: 2.16e-06 | Elapsed: 180s
+Epoch 3 | Step 2300/2814 | Train Loss: 0.1392 | LR: 2.00e-06 | Elapsed: 183s
+Epoch 3 | Step 2350/2814 | Train Loss: 0.1261 | LR: 2.00e-06 | Elapsed: 185s
+Epoch 3 | Step 2400/2814 | Train Loss: 0.1396 | LR: 2.00e-06 | Elapsed: 187s
+
+[EVAL] Step 2400 | Val Loss: 0.0360 | Val PPL: 1.04 | Reasoning Acc: 98.33% | First-Token Acc: 98.33%
+Task-wise: compare_2way=100.0%, bind_value_to_entity=100.0%, compare_3way=95.0%, compare_4way=94.9%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 98.33%)
+Epoch 3 | Step 2450/2814 | Train Loss: 0.1144 | LR: 2.00e-06 | Elapsed: 199s
+Epoch 3 | Step 2500/2814 | Train Loss: 0.1235 | LR: 2.00e-06 | Elapsed: 202s
+Epoch 3 | Step 2550/2814 | Train Loss: 0.1113 | LR: 2.00e-06 | Elapsed: 204s
+Epoch 3 | Step 2600/2814 | Train Loss: 0.1233 | LR: 2.00e-06 | Elapsed: 206s
+Epoch 3 | Step 2650/2814 | Train Loss: 0.1069 | LR: 2.00e-06 | Elapsed: 209s
+Epoch 3 | Step 2700/2814 | Train Loss: 0.1134 | LR: 2.00e-06 | Elapsed: 211s
+
+[EVAL] Step 2700 | Val Loss: 0.0327 | Val PPL: 1.03 | Reasoning Acc: 98.33% | First-Token Acc: 98.33%
+Task-wise: compare_2way=100.0%, bind_value_to_entity=100.0%, compare_3way=95.7%, compare_4way=93.2%, equality=100.0%, bind_entity_to_value=100.0%
+[Patience] 1/5 evals without accuracy improvement.
+Epoch 3 | Step 2750/2814 | Train Loss: 0.1171 | LR: 2.00e-06 | Elapsed: 227s
+Epoch 3 | Step 2800/2814 | Train Loss: 0.1211 | LR: 2.00e-06 | Elapsed: 229s
+================================================================================
+TRAINING COMPLETE
+================================================================================

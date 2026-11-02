@@ -1,0 +1,43 @@
+# Model L - Nepali (low-resource) - same scaled Pathway-B architecture as Hindi
+pathway_name: nepali_full_winnerB
+language: nepali
+
+# --- architecture (identical to Hindi; only the vocab/tokenizer differ) ---
+vocab_size: 32000
+d_model: 448
+n_layers: 6
+n_heads: 8
+d_ff: 1024
+max_seq_len: 512
+dropout: 0.1
+
+# --- optimization ---
+lr: 3.0e-4
+weight_decay: 0.1
+betas: [0.9, 0.95]
+grad_clip_norm: 1.0
+
+# --- schedule / steps ---
+batch_size: 32
+grad_accum_steps: 2
+max_steps: 15000
+warmup_steps: 300        # max(300, max_steps // 50)
+eval_interval: 500
+ckpt_interval: 500
+
+# --- data files (tokenizer + tokenized corpus) ---
+sp_model: nepali_bpe_32000.model
+sp_vocab: nepali_bpe_32000.vocab
+train_txt: nepali_train.txt
+val_txt: nepali_val.txt
+train_bin: data/nepali_train.bin
+val_bin: data/nepali_val.bin
+
+# --- checkpointing ---
+ckpt_dir: checkpoints/nepali
+latest_ckpt: checkpoints/nepali/latest.pt
+best_ckpt: checkpoints/nepali/best.pt
+
+# --- runtime ---
+device: cuda
+amp_dtype: bfloat16

@@ -1,0 +1,43 @@
+# Model H - Hindi (high-resource) - Pathway B: shallow & wide, scaled to ~25M params
+pathway_name: hindi_full_winnerB
+language: hindi
+
+# --- architecture ---
+vocab_size: 32000
+d_model: 448
+n_layers: 6
+n_heads: 8
+d_ff: 1024
+max_seq_len: 512
+dropout: 0.1
+
+# --- optimization ---
+lr: 3.0e-4
+weight_decay: 0.1
+betas: [0.9, 0.95]
+grad_clip_norm: 1.0
+
+# --- schedule / steps ---
+batch_size: 32
+grad_accum_steps: 2
+max_steps: 11000
+warmup_steps: 300        # max(300, max_steps // 50)
+eval_interval: 500
+ckpt_interval: 500
+
+# --- data files (tokenizer + tokenized corpus) ---
+sp_model: hindi_bpe_32000.model
+sp_vocab: hindi_bpe_32000.vocab
+train_txt: hindi_train.txt
+val_txt: hindi_val.txt
+train_bin: data/hindi_train.bin
+val_bin: data/hindi_val.bin
+
+# --- checkpointing ---
+ckpt_dir: checkpoints/hindi
+latest_ckpt: checkpoints/hindi/latest.pt
+best_ckpt: checkpoints/hindi/best.pt
+
+# --- runtime ---
+device: cuda
+amp_dtype: bfloat16

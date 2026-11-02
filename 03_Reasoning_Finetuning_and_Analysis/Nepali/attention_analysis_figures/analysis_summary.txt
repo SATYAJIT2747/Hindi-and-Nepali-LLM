@@ -1,0 +1,57 @@
+ATTENTION ANALYSIS SUMMARY (NEPALI)
+================================================================================
+
+compare_2way
+----------------------------------------
+ENTROPY (Lower = More Focused)
+  Pretrained   | L0: 2.0734 | L5: 2.0739
+  Soft         | L0: 2.0712 | L5: 2.0755
+  Hard         | L0: 2.0737 | L5: 2.0772
+
+DISTANCE (Lower = More Local)
+  Pretrained   | L0: 4.7320 | L5: 4.7808
+  Soft         | L0: 4.7314 | L5: 4.7877
+  Hard         | L0: 4.7399 | L5: 4.7279
+
+CONCENTRATION (Higher = More Peaked)
+  Pretrained   | L0: 0.2381 | L5: 0.2376
+  Soft         | L0: 0.2391 | L5: 0.2369
+  Hard         | L0: 0.2384 | L5: 0.2348
+
+
+compare_3way
+----------------------------------------
+ENTROPY (Lower = More Focused)
+  Pretrained   | L0: 2.4081 | L5: 2.4138
+  Soft         | L0: 2.4110 | L5: 2.4143
+  Hard         | L0: 2.4104 | L5: 2.4130
+
+DISTANCE (Lower = More Local)
+  Pretrained   | L0: 6.9602 | L5: 7.0238
+  Soft         | L0: 6.9955 | L5: 7.0381
+  Hard         | L0: 7.0054 | L5: 7.0286
+
+CONCENTRATION (Higher = More Peaked)
+  Pretrained   | L0: 0.1923 | L5: 0.1850
+  Soft         | L0: 0.1880 | L5: 0.1835
+  Hard         | L0: 0.1869 | L5: 0.1854
+
+
+compare_4way
+----------------------------------------
+ENTROPY (Lower = More Focused)
+  Pretrained   | L0: 2.0732 | L5: 2.0765
+  Soft         | L0: 2.0716 | L5: 2.0784
+  Hard         | L0: 2.0797 | L5: 2.0730
+
+DISTANCE (Lower = More Local)
+  Pretrained   | L0: 4.7182 | L5: 4.8043
+  Soft         | L0: 4.7418 | L5: 4.7321
+  Hard         | L0: 4.7597 | L5: 4.7273
+
+CONCENTRATION (Higher = More Peaked)
+  Pretrained   | L0: 0.2377 | L5: 0.2364
+  Soft         | L0: 0.2408 | L5: 0.2352
+  Hard         | L0: 0.2317 | L5: 0.2387
+
+

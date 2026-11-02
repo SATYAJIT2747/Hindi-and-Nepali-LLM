@@ -1,0 +1,104 @@
+﻿================================================================================
+HARD TRAINING ΓÇö HARD DATA FROM SOFT (NEPALI)
+================================================================================
+Learning rate       : 1e-05
+Epochs              : 3
+First-token weight  : 3.0
+Warmup ratio        : 0.06
+Weight decay        : 0.01
+Batch size          : 32
+Device              : cuda
+Tokenizer path      : c:\Users\satya\Desktop\LMA_PROJ\phase3\nepali\data\nepali_bpe_32000.model
+Soft Checkpoint     : c:\Users\satya\Desktop\LMA_PROJ\phase3\nepali\data\soft_best.pt
+
+Tokenizer loaded.
+Vocabulary size: 32000
+EOS ID: 2
+PAD ID: 3
+
+Dataset:
+Train samples: 30,000
+Val samples  : 3,000
+
+================================================================================
+LOADING SOFT CHECKPOINT
+================================================================================
+[OK] SOFT checkpoint loaded successfully.
+================================================================================
+STARTING HARD TRAINING (NEPALI)
+================================================================================
+
+[EVAL] Step 300 | Val First-Token Acc: 41.50% | Elapsed: 23s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 8.82%
+  compare_2way                : 58.76%
+  compare_3way                : 39.90%
+  compare_4way                : 30.60%
+>>> NEW BEST HARD CHECKPOINT SAVED (41.50%)
+
+[EVAL] Step 600 | Val First-Token Acc: 43.50% | Elapsed: 46s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 29.41%
+  compare_2way                : 62.89%
+  compare_3way                : 43.43%
+  compare_4way                : 28.02%
+>>> NEW BEST HARD CHECKPOINT SAVED (43.50%)
+
+[EVAL] Step 900 | Val First-Token Acc: 47.83% | Elapsed: 69s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 23.53%
+  compare_2way                : 73.20%
+  compare_3way                : 44.95%
+  compare_4way                : 34.48%
+>>> NEW BEST HARD CHECKPOINT SAVED (47.83%)
+
+[EVAL] Step 1200 | Val First-Token Acc: 49.50% | Elapsed: 92s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 44.12%
+  compare_2way                : 71.13%
+  compare_3way                : 45.96%
+  compare_4way                : 35.78%
+>>> NEW BEST HARD CHECKPOINT SAVED (49.50%)
+
+[EVAL] Step 1500 | Val First-Token Acc: 56.67% | Elapsed: 116s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 44.12%
+  compare_2way                : 80.41%
+  compare_3way                : 54.04%
+  compare_4way                : 43.53%
+>>> NEW BEST HARD CHECKPOINT SAVED (56.67%)
+
+[EVAL] Step 1800 | Val First-Token Acc: 58.50% | Elapsed: 139s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 47.06%
+  compare_2way                : 79.38%
+  compare_3way                : 60.10%
+  compare_4way                : 43.10%
+>>> NEW BEST HARD CHECKPOINT SAVED (58.50%)
+
+[EVAL] Step 2100 | Val First-Token Acc: 59.83% | Elapsed: 162s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 50.00%
+  compare_2way                : 78.35%
+  compare_3way                : 62.63%
+  compare_4way                : 44.40%
+>>> NEW BEST HARD CHECKPOINT SAVED (59.83%)
+
+[EVAL] Step 2400 | Val First-Token Acc: 61.00% | Elapsed: 185s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 47.06%
+  compare_2way                : 81.44%
+  compare_3way                : 65.66%
+  compare_4way                : 43.97%
+>>> NEW BEST HARD CHECKPOINT SAVED (61.00%)
+
+[EVAL] Step 2700 | Val First-Token Acc: 62.17% | Elapsed: 207s
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 50.00%
+  compare_2way                : 80.41%
+  compare_3way                : 66.16%
+  compare_4way                : 46.55%
+>>> NEW BEST HARD CHECKPOINT SAVED (62.17%)
+================================================================================
+HARD TRAINING COMPLETE
+================================================================================

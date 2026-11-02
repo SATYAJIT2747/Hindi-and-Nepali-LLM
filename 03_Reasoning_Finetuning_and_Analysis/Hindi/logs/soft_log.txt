@@ -1,0 +1,615 @@
+Target task quotas:
+  bind_entity_to_value    : 7200
+  bind_value_to_entity    : 5400
+  compare_2way            : 9000
+  compare_3way            : 7200
+  compare_4way            : 3600
+  equality                : 3600
+
+Generating V5 dataset...
+No rejection-based generation is used.
+
+bind_entity_to_value    :   7200
+bind_value_to_entity    :   5400
+compare_2way            :   9000
+compare_3way            :   7200
+compare_4way            :   3600
+equality                :   3600
+
+Total generated: 36,000
+
+================================================================================
+V5 DATASET CREATED
+================================================================================
+Train : 30,000 -> /kaggle/working/v5_train.jsonl
+Val   : 3,000 -> /kaggle/working/v5_val.jsonl
+Test  : 3,000 -> /kaggle/working/v5_test.jsonl
+
+--- TRAIN TASK DISTRIBUTION ---
+bind_entity_to_value    :   5998 ( 20.0%)
+bind_value_to_entity    :   4492 ( 15.0%)
+compare_2way            :   7546 ( 25.2%)
+compare_3way            :   5982 ( 19.9%)
+compare_4way            :   3005 ( 10.0%)
+equality                :   2977 (  9.9%)
+
+--- VALIDATION TASK DISTRIBUTION ---
+bind_entity_to_value    :    615 ( 20.5%)
+bind_value_to_entity    :    444 ( 14.8%)
+compare_2way            :    691 ( 23.0%)
+compare_3way            :    621 ( 20.7%)
+compare_4way            :    315 ( 10.5%)
+equality                :    314 ( 10.5%)
+
+--- TEST TASK DISTRIBUTION ---
+bind_entity_to_value    :    587 ( 19.6%)
+bind_value_to_entity    :    464 ( 15.5%)
+compare_2way            :    763 ( 25.4%)
+compare_3way            :    597 ( 19.9%)
+compare_4way            :    280 (  9.3%)
+equality                :    309 ( 10.3%)
+
+--- TRAIN ANSWER POSITION BALANCE ---
+
+compare_2way:
+  pos0: 3768
+  pos1: 3778
+
+compare_3way:
+  pos0: 2006
+  pos1: 1984
+  pos2: 1992
+
+compare_4way:
+  pos0: 741
+  pos1: 743
+  pos2: 765
+  pos3: 756
+
+--- TOP ANSWER NAMES ---
+विकास     : 1365
+नीलम      : 1363
+पूजा      : 1348
+दीपक      : 1344
+कविता     : 1324
+अमित      : 1323
+सुनीता    : 1322
+राहुल     : 1320
+संजय      : 1313
+अशोक      : 1311
+रोहित     : 1303
+रमेश      : 1302
+राजू      : 1300
+सुरेश     : 1287
+मोहन      : 1276
+
+================================================================================
+10 SAMPLE EXAMPLES
+================================================================================
+
+Example 1
+------------------------------------------------------------
+दीपक: 90 रुपये
+सुरेश: 40 रुपये
+
+40 रुपये किसके हैं?
+उत्तर:
+GOLD:  सुरेश
+TASK: bind_value_to_entity
+ANSWER POSITION: 1
+
+Example 2
+------------------------------------------------------------
+विकास के अंक 69 हैं। राहुल के अंक 60 हैं। रमेश के अंक 37 हैं। दीपक के अंक 25 हैं।
+इनमें से सबसे कम किसके हैं?
+उत्तर:
+GOLD:  दीपक
+TASK: compare_4way
+ANSWER POSITION: 3
+
+Example 3
+------------------------------------------------------------
+रोहित के मूल्य 43 रुपये हैं। सुनीता के मूल्य 11 रुपये हैं। सुरेश के मूल्य 33 रुपये हैं। विकास के मूल्य 98 रुपये हैं।
+इनमें से सबसे सस्ता किसके हैं?
+उत्तर:
+GOLD:  सुनीता
+TASK: compare_4way
+ANSWER POSITION: 1
+
+Example 4
+------------------------------------------------------------
+राजू का मूल्य 96 रुपये है, जबकि नीलम का मूल्य 84 रुपये है।
+84 रुपये किसका है?
+उत्तर:
+GOLD:  नीलम
+TASK: bind_value_to_entity
+ANSWER POSITION: 1
+
+Example 5
+------------------------------------------------------------
+पूजा के उम्र 58 वर्ष हैं। अमित के उम्र 97 वर्ष हैं।
+इनमें से सबसे बड़ा किसके हैं?
+उत्तर:
+GOLD:  अमित
+TASK: compare_2way
+ANSWER POSITION: 1
+
+Example 6
+------------------------------------------------------------
+नीलम: 10 वर्ष
+राहुल: 10 वर्ष
+
+किसके अधिक उम्र हैं?
+उत्तर:
+GOLD:  दोनों समान हैं
+TASK: equality
+ANSWER POSITION: -1
+
+Example 7
+------------------------------------------------------------
+नीलम के अंक 75 हैं। विकास के अंक 23 हैं। पूजा के अंक 33 हैं।
+इनमें से सबसे अधिक किसके हैं?
+उत्तर:
+GOLD:  नीलम
+TASK: compare_3way
+ANSWER POSITION: 0
+
+Example 8
+------------------------------------------------------------
+अमित के अंक 80 हैं और सुरेश के अंक भी 80 हैं।
+किसका अंक अधिक है?
+उत्तर:
+GOLD:  दोनों समान हैं
+TASK: equality
+ANSWER POSITION: -1
+
+Example 9
+------------------------------------------------------------
+राहुल के वजन 56 किलोग्राम हैं।
+राहुल के वजन कितने हैं?
+उत्तर:
+GOLD:  56
+TASK: bind_entity_to_value
+ANSWER POSITION: 0
+
+Example 10
+------------------------------------------------------------
+विकास के अंक 77 हैं। कविता के अंक 18 हैं।
+इनमें से सबसे अधिक किसके हैं?
+उत्तर:
+GOLD:  विकास
+TASK: compare_2way
+ANSWER POSITION: 0
+
+================================================================================
+SANITY CHECKS
+================================================================================
+✓ No duplicate prompts
+✓ Train/Val/Test sizes correct
+✓ All comparison answer positions valid
+
+V5 generation COMPLETE.
+You can now start V5 training.
+add Codeadd Markdown
+
+
+
+
+
+
+V5 TRAINING — V2 RECIPE
+================================================================================
+Learning rate       : 2e-05
+Epochs              : 3
+First-token weight  : 3.0
+Warmup ratio        : 0.06
+Weight decay        : 0.01
+Batch size          : 32
+Device              : cuda
+
+Tokenizer loaded.
+EOS ID: 2
+PAD ID: 3
+
+Dataset:
+Train samples: 30,000
+Val samples  : 3,000
+
+Accuracy evaluation subset: 600 samples
+
+Loaded base checkpoint with 24,918,528 parameters.
+
+================================================================================
+STARTING V5 TRAINING
+================================================================================
+Total steps       : 2814
+Warmup steps      : 168
+First-token weight: 3.0
+
+Epoch 1 | Step 50/2814 | Train Loss: 5.9925 | LR: 5.95e-06 | Elapsed: 5s
+Epoch 1 | Step 100/2814 | Train Loss: 2.7406 | LR: 1.19e-05 | Elapsed: 10s
+Epoch 1 | Step 150/2814 | Train Loss: 1.4563 | LR: 1.79e-05 | Elapsed: 16s
+Epoch 1 | Step 200/2814 | Train Loss: 1.1151 | LR: 2.00e-05 | Elapsed: 22s
+Epoch 1 | Step 250/2814 | Train Loss: 0.9345 | LR: 2.00e-05 | Elapsed: 28s
+Epoch 1 | Step 300/2814 | Train Loss: 0.8270 | LR: 1.99e-05 | Elapsed: 33s
+
+[EVAL] Step 300 | Val Loss: 0.4329 | Val PPL: 1.54 | Reasoning Acc: 69.17% | First-Token Acc: 69.17%
+Task-wise: compare_2way=57.0%, bind_value_to_entity=100.0%, compare_3way=43.2%, compare_4way=23.7%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 69.17%)
+
+Epoch 1 | Step 350/2814 | Train Loss: 0.8081 | LR: 1.98e-05 | Elapsed: 50s
+Epoch 1 | Step 400/2814 | Train Loss: 0.7049 | LR: 1.96e-05 | Elapsed: 55s
+Epoch 1 | Step 450/2814 | Train Loss: 0.6346 | LR: 1.94e-05 | Elapsed: 60s
+Epoch 1 | Step 500/2814 | Train Loss: 0.6650 | LR: 1.92e-05 | Elapsed: 65s
+Epoch 1 | Step 550/2814 | Train Loss: 0.6048 | LR: 1.90e-05 | Elapsed: 70s
+Epoch 1 | Step 600/2814 | Train Loss: 0.5563 | LR: 1.87e-05 | Elapsed: 75s
+
+[EVAL] Step 600 | Val Loss: 0.2739 | Val PPL: 1.32 | Reasoning Acc: 78.33% | First-Token Acc: 78.33%
+Task-wise: compare_2way=78.2%, bind_value_to_entity=100.0%, compare_3way=56.8%, compare_4way=33.9%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 78.33%)
+
+Epoch 1 | Step 650/2814 | Train Loss: 0.5320 | LR: 1.84e-05 | Elapsed: 92s
+Epoch 1 | Step 700/2814 | Train Loss: 0.5172 | LR: 1.81e-05 | Elapsed: 97s
+Epoch 1 | Step 750/2814 | Train Loss: 0.4886 | LR: 1.77e-05 | Elapsed: 103s
+Epoch 1 | Step 800/2814 | Train Loss: 0.4663 | LR: 1.73e-05 | Elapsed: 108s
+Epoch 1 | Step 850/2814 | Train Loss: 0.4047 | LR: 1.69e-05 | Elapsed: 114s
+Epoch 1 | Step 900/2814 | Train Loss: 0.4017 | LR: 1.65e-05 | Elapsed: 119s
+
+[EVAL] Step 900 | Val Loss: 0.1406 | Val PPL: 1.15 | Reasoning Acc: 89.33% | First-Token Acc: 89.33%
+Task-wise: compare_2way=93.0%, bind_value_to_entity=100.0%, compare_3way=81.3%, compare_4way=52.5%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 89.33%)
+
+Epoch 2 | Step 950/2814 | Train Loss: 0.3225 | LR: 1.60e-05 | Elapsed: 136s
+Epoch 2 | Step 1000/2814 | Train Loss: 0.3045 | LR: 1.55e-05 | Elapsed: 141s
+Epoch 2 | Step 1050/2814 | Train Loss: 0.2977 | LR: 1.50e-05 | Elapsed: 146s
+Epoch 2 | Step 1100/2814 | Train Loss: 0.2791 | LR: 1.45e-05 | Elapsed: 151s
+Epoch 2 | Step 1150/2814 | Train Loss: 0.2452 | LR: 1.39e-05 | Elapsed: 157s
+Epoch 2 | Step 1200/2814 | Train Loss: 0.2329 | LR: 1.34e-05 | Elapsed: 162s
+
+[EVAL] Step 1200 | Val Loss: 0.0884 | Val PPL: 1.09 | Reasoning Acc: 94.33% | First-Token Acc: 94.33%
+Task-wise: compare_2way=97.9%, bind_value_to_entity=98.9%, compare_3way=92.1%, compare_4way=67.8%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 94.33%)
+
+Epoch 2 | Step 1250/2814 | Train Loss: 0.2323 | LR: 1.28e-05 | Elapsed: 179s
+Epoch 2 | Step 1300/2814 | Train Loss: 0.2052 | LR: 1.22e-05 | Elapsed: 184s
+Epoch 2 | Step 1350/2814 | Train Loss: 0.2223 | LR: 1.17e-05 | Elapsed: 189s
+Epoch 2 | Step 1400/2814 | Train Loss: 0.1820 | LR: 1.11e-05 | Elapsed: 194s
+Epoch 2 | Step 1450/2814 | Train Loss: 0.1934 | LR: 1.05e-05 | Elapsed: 199s
+Epoch 2 | Step 1500/2814 | Train Loss: 0.1750 | LR: 9.89e-06 | Elapsed: 205s
+
+[EVAL] Step 1500 | Val Loss: 0.0566 | Val PPL: 1.06 | Reasoning Acc: 96.83% | First-Token Acc: 96.83%
+Task-wise: compare_2way=98.6%, bind_value_to_entity=98.9%, compare_3way=94.2%, compare_4way=86.4%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 96.83%)
+
+Epoch 2 | Step 1550/2814 | Train Loss: 0.1605 | LR: 9.30e-06 | Elapsed: 222s
+Epoch 2 | Step 1600/2814 | Train Loss: 0.1542 | LR: 8.71e-06 | Elapsed: 227s
+Epoch 2 | Step 1650/2814 | Train Loss: 0.1597 | LR: 8.12e-06 | Elapsed: 232s
+Epoch 2 | Step 1700/2814 | Train Loss: 0.1426 | LR: 7.54e-06 | Elapsed: 237s
+Epoch 2 | Step 1750/2814 | Train Loss: 0.1669 | LR: 6.97e-06 | Elapsed: 243s
+Epoch 2 | Step 1800/2814 | Train Loss: 0.1425 | LR: 6.41e-06 | Elapsed: 248s
+
+[EVAL] Step 1800 | Val Loss: 0.0592 | Val PPL: 1.06 | Reasoning Acc: 96.50% | First-Token Acc: 96.50%
+Task-wise: compare_2way=98.6%, bind_value_to_entity=96.8%, compare_3way=95.0%, compare_4way=84.7%, equality=100.0%, bind_entity_to_value=100.0%
+[Patience] 1/5 evals without accuracy improvement.
+
+Epoch 2 | Step 1850/2814 | Train Loss: 0.1311 | LR: 5.87e-06 | Elapsed: 264s
+Epoch 3 | Step 1900/2814 | Train Loss: 0.1618 | LR: 5.33e-06 | Elapsed: 270s
+Epoch 3 | Step 1950/2814 | Train Loss: 0.1287 | LR: 4.82e-06 | Elapsed: 275s
+Epoch 3 | Step 2000/2814 | Train Loss: 0.0986 | LR: 4.32e-06 | Elapsed: 280s
+Epoch 3 | Step 2050/2814 | Train Loss: 0.0806 | LR: 3.84e-06 | Elapsed: 285s
+Epoch 3 | Step 2100/2814 | Train Loss: 0.1382 | LR: 3.38e-06 | Elapsed: 291s
+
+[EVAL] Step 2100 | Val Loss: 0.0389 | Val PPL: 1.04 | Reasoning Acc: 97.83% | First-Token Acc: 97.83%
+Task-wise: compare_2way=99.3%, bind_value_to_entity=98.9%, compare_3way=97.1%, compare_4way=88.1%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 97.83%)
+
+Epoch 3 | Step 2150/2814 | Train Loss: 0.1017 | LR: 2.95e-06 | Elapsed: 307s
+Epoch 3 | Step 2200/2814 | Train Loss: 0.1058 | LR: 2.54e-06 | Elapsed: 313s
+Epoch 3 | Step 2250/2814 | Train Loss: 0.1020 | LR: 2.16e-06 | Elapsed: 318s
+Epoch 3 | Step 2300/2814 | Train Loss: 0.1250 | LR: 2.00e-06 | Elapsed: 323s
+Epoch 3 | Step 2350/2814 | Train Loss: 0.1229 | LR: 2.00e-06 | Elapsed: 328s
+Epoch 3 | Step 2400/2814 | Train Loss: 0.1251 | LR: 2.00e-06 | Elapsed: 333s
+
+[EVAL] Step 2400 | Val Loss: 0.0357 | Val PPL: 1.04 | Reasoning Acc: 98.17% | First-Token Acc: 98.17%
+Task-wise: compare_2way=100.0%, bind_value_to_entity=98.9%, compare_3way=97.1%, compare_4way=89.8%, equality=100.0%, bind_entity_to_value=100.0%
+>>> New best checkpoint saved (Reasoning Acc: 98.17%)
+
+Epoch 3 | Step 2450/2814 | Train Loss: 0.0852 | LR: 2.00e-06 | Elapsed: 350s
+Epoch 3 | Step 2500/2814 | Train Loss: 0.1185 | LR: 2.00e-06 | Elapsed: 356s
+Epoch 3 | Step 2550/2814 | Train Loss: 0.1094 | LR: 2.00e-06 | Elapsed: 361s
+Epoch 3 | Step 2600/2814 | Train Loss: 0.1131 | LR: 2.00e-06 | Elapsed: 366s
+Epoch 3 | Step 2650/2814 | Train Loss: 0.0944 | LR: 2.00e-06 | Elapsed: 371s
+Epoch 3 | Step 2700/2814 | Train Loss: 0.1155 | LR: 2.00e-06 | Elapsed: 376s
+
+[EVAL] Step 2700 | Val Loss: 0.0341 | Val PPL: 1.03 | Reasoning Acc: 97.83% | First-Token Acc: 97.83%
+Task-wise: compare_2way=99.3%, bind_value_to_entity=98.9%, compare_3way=97.1%, compare_4way=88.1%, equality=100.0%, bind_entity_to_value=100.0%
+[Patience] 1/5 evals without accuracy improvement.
+
+Epoch 3 | Step 2750/2814 | Train Loss: 0.0929 | LR: 2.00e-06 | Elapsed: 393s
+Epoch 3 | Step 2800/2814 | Train Loss: 0.1091 | LR: 2.00e-06 | Elapsed: 398s
+================================================================================
+TRAINING COMPLETE
+================================================================================
+Best reasoning accuracy: 98.17%
+Best checkpoint: /kaggle/working/v5_best_v2recipe.pt
+
+
+
+V5 FINAL EVALUATION
+================================================================================
+Device     : cuda
+Checkpoint : /kaggle/working/v5_best_v2recipe.pt
+Test file  : /kaggle/working/v5_test.jsonl
+
+Tokenizer loaded.
+EOS ID: 2
+PAD ID: 3
+
+Loading model...
+Checkpoint loaded.
+Model parameters: 24,918,528
+✓ Model architecture matches checkpoint.
+✓ Checkpoint loaded successfully.
+
+Test examples loaded: 3,000
+
+================================================================================
+CRITICAL DIAGNOSTICS
+================================================================================
+
+--- Diagnostic 1 ---
+Gold: रोहित
+Pred: रोहित
+Top-8 next-token predictions:
+  'रोहित'                   0.9993
+  'राहुल'                   0.0001
+  'दीपक'                    0.0001
+  'सुरेश'                   0.0001
+  'मोहन'                    0.0000
+  'संजय'                    0.0000
+  'विकास'                   0.0000
+  'सुनीता'                  0.0000
+
+--- Diagnostic 2 ---
+Gold: विकास
+Pred: विकास
+Top-8 next-token predictions:
+  'विकास'                   0.9583
+  'अमित'                    0.0209
+  'राहुल'                   0.0175
+  'अशोक'                    0.0008
+  'रोहित'                   0.0005
+  'संजय'                    0.0004
+  'मोहन'                    0.0004
+  'राजू'                    0.0003
+
+--- Diagnostic 3 ---
+Gold: कविता
+Pred: संजय
+Top-8 next-token predictions:
+  'संजय'                    0.9988
+  'कविता'                   0.0004
+  'मोहन'                    0.0001
+  'रमेश'                    0.0001
+  'राजू'                    0.0001
+  'सुनीता'                  0.0001
+  'राहुल'                   0.0001
+  'दीपक'                    0.0001
+
+--- Diagnostic 4 ---
+Gold: दोनों समान हैं
+Pred: दोनों समान हैं
+Top-8 next-token predictions:
+  'दोनों'                   1.0000
+  'समान'                    0.0000
+  'हैं'                     0.0000
+  'के'                      0.0000
+  'से'                      0.0000
+  'का'                      0.0000
+  'भी'                      0.0000
+  ''                        0.0000
+
+--- Diagnostic 5 ---
+Gold: रमेश
+Pred: रमेश
+Top-8 next-token predictions:
+  'रमेश'                    0.9987
+  'रोहित'                   0.0004
+  'सुनीता'                  0.0002
+  'सुरेश'                   0.0002
+  'दीपक'                    0.0001
+  'राहुल'                   0.0001
+  'मोहन'                    0.0001
+  'अशोक'                    0.0000
+
+================================================================================
+FULL TEST SET EVALUATION
+================================================================================
+
+================================================================================
+FINAL RESULTS
+================================================================================
+Exact Match Accuracy : 2922/3000 (97.40%)
+
+--- Accuracy by Task ---
+bind_entity_to_value        :  587/587  (100.00%)
+bind_value_to_entity        :  464/464  (100.00%)
+compare_2way                :  752/763  (98.56%)
+compare_3way                :  567/597  (94.97%)
+compare_4way                :  243/280  (86.79%)
+equality                    :  309/309  (100.00%)
+
+--- Equality ---
+equality        :  309/309  (100.00%)
+non_equality    : 2613/2691 (97.10%)
+
+--- Accuracy by Number of Entities ---
+2-entity                    : 2112/2123 (99.48%)
+3-entity                    :  567/597  (94.97%)
+4-entity                    :  243/280  (86.79%)
+
+--- Accuracy by Answer Position ---
+pos0    : 1237/1247 (99.20%)
+pos1    : 1080/1114 (96.95%)
+pos2    :  243/267  (91.01%)
+pos3    :   53/63   (84.13%)
+EQ      :  309/309  (100.00%)
+
+================================================================================
+SAMPLE CORRECT PREDICTIONS
+================================================================================
+
+[SUCCESS 1] Task: compare_3way
+Prompt:
+कविता का वजन 65 किलोग्राम है। पूजा का वजन 16 किलोग्राम है। अशोक का वजन 43 किलोग्राम है।
+सबसे कम वजन किसका है?
+उत्तर:
+Gold: पूजा
+Pred : पूजा
+
+[SUCCESS 2] Task: compare_2way
+Prompt:
+अमित: 14
+राहुल: 39
+
+सबसे कम अंक किसके हैं?
+उत्तर:
+Gold: अमित
+Pred : अमित
+
+[SUCCESS 3] Task: bind_value_to_entity
+Prompt:
+रमेश: 67 किलोग्राम
+विकास: 92 किलोग्राम
+
+92 किलोग्राम किसके हैं?
+उत्तर:
+Gold: विकास
+Pred : विकास
+
+[SUCCESS 4] Task: bind_entity_to_value
+Prompt:
+सुरेश के उम्र 23 वर्ष हैं।
+सुरेश के उम्र कितने हैं?
+उत्तर:
+Gold: 23
+Pred : 23
+
+[SUCCESS 5] Task: equality
+Prompt:
+राहुल के उम्र 36 वर्ष हैं और दीपक के उम्र भी 36 वर्ष हैं।
+किसका उम्र अधिक है?
+उत्तर:
+Gold: दोनों समान हैं
+Pred : दोनों समान हैं
+
+================================================================================
+SAMPLE FAILURES
+================================================================================
+
+[FAIL 1] Task: compare_4way
+Prompt:
+विकास: 19 रुपये
+रोहित: 18 रुपये
+मोहन: 21 रुपये
+संजय: 79 रुपये
+
+कौन सबसे सस्ता है?
+उत्तर:
+Gold: रोहित
+Pred : विकास
+
+[FAIL 2] Task: compare_3way
+Prompt:
+अमित: 84
+कविता: 39
+रोहित: 88
+
+सबसे अधिक अंक किसके हैं?
+उत्तर:
+Gold: रोहित
+Pred : अमित
+
+[FAIL 3] Task: compare_4way
+Prompt:
+सुनीता के मूल्य 58 रुपये हैं। संजय के मूल्य 18 रुपये हैं। सुरेश के मूल्य 78 रुपये हैं। अमित के मूल्य 86 रुपये हैं।
+इनमें से सबसे महंगा किसके हैं?
+उत्तर:
+Gold: अमित
+Pred : सुरेश
+
+[FAIL 4] Task: compare_3way
+Prompt:
+रोहित के अंक 72 हैं। कविता के अंक 72 हैं। राहुल के अंक 77 हैं।
+इनमें से सबसे अधिक किसके हैं?
+उत्तर:
+Gold: राहुल
+Pred : कविता
+
+[FAIL 5] Task: compare_3way
+Prompt:
+कविता के अंक 84 हैं। अमित के अंक 89 हैं। मोहन के अंक 16 हैं।
+इनमें से सबसे अधिक किसके हैं?
+उत्तर:
+Gold: अमित
+Pred : कविता
+
+[FAIL 6] Task: compare_3way
+Prompt:
+नीलम के मूल्य 81 रुपये हैं। राजू के मूल्य 95 रुपये हैं। सुनीता के मूल्य 16 रुपये हैं।
+इनमें से सबसे महंगा किसके हैं?
+उत्तर:
+Gold: राजू
+Pred : नीलम
+
+[FAIL 7] Task: compare_4way
+Prompt:
+राहुल के मूल्य 40 रुपये हैं। नीलम के मूल्य 16 रुपये हैं। पूजा के मूल्य 36 रुपये हैं। संजय के मूल्य 72 रुपये हैं।
+इनमें से सबसे महंगा किसके हैं?
+उत्तर:
+Gold: संजय
+Pred : पूजा
+
+[FAIL 8] Task: compare_3way
+Prompt:
+मोहन: 84 किलोग्राम
+अशोक: 92 किलोग्राम
+सुरेश: 15 किलोग्राम
+
+कौन सबसे भारी है?
+उत्तर:
+Gold: अशोक
+Pred : मोहन
+
+[FAIL 9] Task: compare_4way
+Prompt:
+मोहन के उम्र 10 वर्ष हैं। रमेश के उम्र 25 वर्ष हैं। राजू के उम्र 80 वर्ष हैं। अशोक के उम्र 61 वर्ष हैं।
+इनमें से सबसे बड़ा किसके हैं?
+उत्तर:
+Gold: राजू
+Pred : मोहन
+
+[FAIL 10] Task: compare_3way
+Prompt:
+मोहन के मूल्य 77 रुपये हैं। सुनीता के मूल्य 80 रुपये हैं। रमेश के मूल्य 34 रुपये हैं।
+इनमें से सबसे महंगा किसके हैं?
+उत्तर:
+Gold: सुनीता
+Pred : मोहन
+
+================================================================================
+SANITY CHECK
+================================================================================
+Overall total   : 3000
+Task total      : 3000
+Overall correct : 2922
+Task correct    : 2922
+
+✓ Counts are internally consistent.
+✓ No task can exceed 100%.
+✓ Exact-match evaluation is being used.
+✓ Correct checkpoint architecture was loaded.
+
+================================================================================
+EVALUATION COMPLETE
+====================

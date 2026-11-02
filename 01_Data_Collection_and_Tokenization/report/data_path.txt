@@ -1,0 +1,2 @@
+hindi -https://www.kaggle.com/datasets/satyagudu/hindi-data-lma
+nepali -https://www.kaggle.com/datasets/satyagudu/nepali-data-lma

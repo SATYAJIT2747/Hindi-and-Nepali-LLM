@@ -1,0 +1,795 @@
+GENERATING V7 HARD DATASET
+================================================================================
+Generated 5,000/36,000
+Generated 10,000/36,000
+Generated 15,000/36,000
+Generated 20,000/36,000
+Generated 25,000/36,000
+Generated 30,000/36,000
+Generated 35,000/36,000
+
+================================================================================
+DATASET CREATED
+================================================================================
+Train: 30,000
+Val  : 3,000
+Test : 3,000
+
+Train ∩ Val : 0
+Train ∩ Test: 0
+Val ∩ Test  : 0
+
+TASK DISTRIBUTION
+--------------------------------------------------
+bind_entity_to_value           1800 (  5.0%)
+bind_value_to_entity           1800 (  5.0%)
+compare_2way                   5400 ( 15.0%)
+compare_3way                  12600 ( 35.0%)
+compare_4way                  14400 ( 40.0%)
+
+ANSWER POSITION DISTRIBUTION
+--------------------------------------------------
+
+compare_2way
+  pos0: 2700
+  pos1: 2700
+
+compare_3way
+  pos0: 4200
+  pos1: 4200
+  pos2: 4200
+
+compare_4way
+  pos0: 3600
+  pos1: 3600
+  pos2: 3600
+  pos3: 3600
+
+================================================================================
+SAMPLE HARD EXAMPLES
+================================================================================
+
+Task: compare_3way
+पूजा के उम्र = 65 वर्ष
+अमित के उम्र = 61 वर्ष
+सुरेश के उम्र = 58 वर्ष
+
+सबसे कम उम्र किसकी है?
+उत्तर:
+Gold:  सुरेश
+
+Task: compare_4way
+रमेश का उम्र 27 वर्ष है।
+राहुल का उम्र 29 वर्ष है।
+मोहन का उम्र 24 वर्ष है।
+कविता का उम्र 26 वर्ष है।
+
+सबसे छोटा
+उत्तर:
+Gold:  मोहन
+
+Task: compare_4way
+दीपक के अंक = 86
+सुनीता के अंक = 88
+अशोक के अंक = 96
+रोहित के अंक = 94
+
+सबसे अधिक अंक किसके हैं?
+उत्तर:
+Gold:  अशोक
+
+Task: compare_3way
+कविता: 67 किलोग्राम
+राहुल: 66 किलोग्राम
+सुरेश: 70 किलोग्राम
+
+न्यूनतम वजन
+उत्तर:
+Gold:  राहुल
+
+Task: compare_3way
+राहुल का मूल्य 45 रुपये है।
+राजू का मूल्य 37 रुपये है।
+दीपक का मूल्य 39 रुपये है।
+
+अधिकतम मूल्य
+उत्तर:
+Gold:  राहुल
+
+Task: compare_4way
+अशोक का वजन 26 किलोग्राम है।
+कविता का वजन 23 किलोग्राम है।
+रोहित का वजन 31 किलोग्राम है।
+रमेश का वजन 21 किलोग्राम है।
+
+सबसे अधिक वजन किसका है?
+उत्तर:
+Gold:  रोहित
+
+Task: compare_4way
+अमित का अंक 73 है।
+मोहन का अंक 74 है।
+संजय का अंक 75 है।
+कविता का अंक 72 है।
+
+न्यूनतम अंक अंक किसके हैं?
+उत्तर:
+Gold:  कविता
+
+Task: compare_4way
+दीपक के उम्र 85 वर्ष हैं।
+पूजा के उम्र 88 वर्ष हैं।
+राजू के उम्र 84 वर्ष हैं।
+मोहन के उम्र 93 वर्ष हैं।
+
+अधिकतम उम्र
+उत्तर:
+Gold:  मोहन
+
+Task: compare_3way
+मोहन: 67 वर्ष
+पूजा: 68 वर्ष
+कविता: 59 वर्ष
+
+सबसे कम उम्र
+उत्तर:
+Gold:  कविता
+
+Task: compare_4way
+दीपक के अंक = 65
+सुरेश के अंक = 66
+कविता के अंक = 70
+विकास के अंक = 75
+
+सबसे कम अंक किसके हैं?
+उत्तर:
+Gold:  दीपक
+
+================================================================================
+FILES
+================================================================================
+/kaggle/working/hard_train.jsonl
+/kaggle/working/hard_val.jsonl
+/kaggle/working/hard_test.jsonl
+
+✓ V7 HARD DATASET READY
+add Codeadd Markdown
+
+
+
+
+
+
+
+
+V7 TRAINING — HARD DATA FROM V6
+================================================================================
+Learning rate       : 1e-05
+Epochs              : 3
+First-token weight  : 3.0
+Warmup ratio        : 0.06
+Weight decay        : 0.01
+Batch size          : 32
+Device              : cuda
+
+Tokenizer loaded.
+Vocabulary size: 32000
+EOS ID: 2
+PAD ID: 3
+
+Dataset:
+Train samples: 30,000
+Val samples  : 3,000
+
+================================================================================
+LOADING V6 CHECKPOINT
+================================================================================
+Checkpoint type: <class 'dict'>
+Checkpoint dictionary detected.
+Removed checkpoint buffer: blocks.0.attn.causal_mask
+Removed checkpoint buffer: blocks.1.attn.causal_mask
+Removed checkpoint buffer: blocks.2.attn.causal_mask
+Removed checkpoint buffer: blocks.3.attn.causal_mask
+Removed checkpoint buffer: blocks.4.attn.causal_mask
+Removed checkpoint buffer: blocks.5.attn.causal_mask
+
+✓ V6 checkpoint loaded successfully.
+Model parameters: 24,918,528
+
+================================================================================
+V7 TRAINING CONFIG
+================================================================================
+Total steps       : 2814
+Warmup steps      : 168
+First-token weight: 3.0
+
+================================================================================
+STARTING V7 TRAINING
+================================================================================
+Epoch 1/3:  32%|███▏      | 299/938 [00:30<00:57, 11.15it/s, loss=2.3041, lr=9.94e-06]
+
+[EVAL] Step 300 | Val First-Token Acc: 45.00% | Elapsed: 32s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 38.24%
+  compare_2way                : 62.89%
+  compare_3way                : 38.89%
+  compare_4way                : 34.48%
+>>> NEW BEST V7 CHECKPOINT SAVED (45.00%)
+
+Epoch 1/3:  64%|██████▍   | 601/938 [00:59<02:17,  2.45it/s, loss=1.7794, lr=9.35e-06]
+
+[EVAL] Step 600 | Val First-Token Acc: 45.00% | Elapsed: 60s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 38.24%
+  compare_2way                : 59.79%
+  compare_3way                : 39.90%
+  compare_4way                : 34.91%
+[Patience] 1/5
+
+Epoch 1/3:  96%|█████████▌| 899/938 [01:25<00:03, 11.94it/s, loss=1.7868, lr=8.23e-06]
+
+[EVAL] Step 900 | Val First-Token Acc: 46.33% | Elapsed: 87s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 29.41%
+  compare_2way                : 65.98%
+  compare_3way                : 43.94%
+  compare_4way                : 33.62%
+Epoch 1/3:  96%|█████████▌| 901/938 [01:27<00:16,  2.24it/s, loss=1.9841, lr=8.22e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (46.33%)
+
+Epoch 1/3: 100%|██████████| 938/938 [01:30<00:00, 10.32it/s, loss=1.6171, lr=8.05e-06]
+Epoch 2/3:  28%|██▊       | 260/938 [00:23<01:01, 11.06it/s, loss=2.0138, lr=6.69e-06]
+
+[EVAL] Step 1200 | Val First-Token Acc: 49.67% | Elapsed: 117s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 35.29%
+  compare_2way                : 70.10%
+  compare_3way                : 46.97%
+  compare_4way                : 37.07%
+Epoch 2/3:  28%|██▊       | 264/938 [00:26<03:50,  2.93it/s, loss=2.0963, lr=6.68e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (49.67%)
+
+Epoch 2/3:  60%|█████▉    | 560/938 [00:52<00:32, 11.69it/s, loss=1.5555, lr=4.95e-06]
+
+[EVAL] Step 1500 | Val First-Token Acc: 54.50% | Elapsed: 146s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 32.35%
+  compare_2way                : 74.23%
+  compare_3way                : 50.00%
+  compare_4way                : 45.69%
+Epoch 2/3:  60%|██████    | 564/938 [00:54<02:09,  2.90it/s, loss=1.8149, lr=4.93e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (54.50%)
+
+Epoch 2/3:  92%|█████████▏| 860/938 [01:20<00:06, 11.63it/s, loss=2.0455, lr=3.21e-06]
+
+[EVAL] Step 1800 | Val First-Token Acc: 57.50% | Elapsed: 174s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 44.12%
+  compare_2way                : 80.41%
+  compare_3way                : 55.05%
+  compare_4way                : 44.83%
+Epoch 2/3:  92%|█████████▏| 864/938 [01:23<00:24,  2.97it/s, loss=1.3777, lr=3.20e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (57.50%)
+
+Epoch 2/3: 100%|██████████| 938/938 [01:29<00:00, 10.50it/s, loss=2.1041, lr=2.79e-06]
+Epoch 3/3:  24%|██▎       | 222/938 [00:19<01:02, 11.54it/s, loss=1.5744, lr=1.69e-06]
+
+[EVAL] Step 2100 | Val First-Token Acc: 58.83% | Elapsed: 202s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 41.18%
+  compare_2way                : 74.23%
+  compare_3way                : 60.10%
+  compare_4way                : 46.98%
+Epoch 3/3:  24%|██▍       | 226/938 [00:22<04:01,  2.95it/s, loss=1.2136, lr=1.68e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (58.83%)
+
+Epoch 3/3:  56%|█████▌    | 522/938 [00:48<00:37, 11.23it/s, loss=1.9589, lr=1.00e-06]
+
+[EVAL] Step 2400 | Val First-Token Acc: 60.50% | Elapsed: 231s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 41.18%
+  compare_2way                : 75.26%
+  compare_3way                : 59.60%
+  compare_4way                : 51.29%
+Epoch 3/3:  56%|█████▌    | 526/938 [00:51<02:19,  2.95it/s, loss=1.4647, lr=1.00e-06]
+>>> NEW BEST V7 CHECKPOINT SAVED (60.50%)
+
+Epoch 3/3:  88%|████████▊ | 826/938 [01:19<00:35,  3.20it/s, loss=1.5148, lr=1.00e-06]
+
+[EVAL] Step 2700 | Val First-Token Acc: 60.50% | Elapsed: 259s
+Task-wise:
+  bind_entity_to_value        : 100.00%
+  bind_value_to_entity        : 38.24%
+  compare_2way                : 76.29%
+  compare_3way                : 58.59%
+  compare_4way                : 52.16%
+[Patience] 1/5
+
+Epoch 3/3: 100%|██████████| 938/938 [01:28<00:00, 10.58it/s, loss=1.8601, lr=1.00e-06]
+
+================================================================================
+V7 TRAINING COMPLETE
+================================================================================
+Best validation accuracy: 60.50%
+Best checkpoint step: 2400
+Saved checkpoint: /kaggle/working/v7_best.pt
+================================================================================
+
+add Codeadd Markdown
+
+
+
+V7 FINAL EVALUATION
+================================================================================
+Device     : cuda
+Checkpoint : /kaggle/working/v7_best.pt
+Test file  : /kaggle/working/hard_test.jsonl
+
+Tokenizer loaded.
+Vocabulary size: 32000
+EOS ID: 2
+PAD ID: 3
+
+================================================================================
+LOADING V7 MODEL
+================================================================================
+Checkpoint type: <class 'dict'>
+Checkpoint dictionary detected.
+
+================================================================================
+ARCHITECTURE CHECK
+================================================================================
+
+Model D_MODEL        : 448
+Model NHEAD          : 8
+Model FFN dimension  : 1024
+Model layers         : 6
+Model max sequence   : 512
+Model vocabulary     : 32000
+
+✓ Architecture matches V7 checkpoint.
+Removed checkpoint buffer: blocks.0.attn.causal_mask
+Removed checkpoint buffer: blocks.1.attn.causal_mask
+Removed checkpoint buffer: blocks.2.attn.causal_mask
+Removed checkpoint buffer: blocks.3.attn.causal_mask
+Removed checkpoint buffer: blocks.4.attn.causal_mask
+Removed checkpoint buffer: blocks.5.attn.causal_mask
+
+✓ V7 checkpoint loaded successfully.
+Model parameters: 24,918,528
+Training best accuracy: 60.50%
+Best checkpoint step: 2400
+
+Test examples loaded: 3,000
+
+================================================================================
+CRITICAL DIAGNOSTICS
+================================================================================
+
+--- Diagnostic 1 ---
+Gold:  दीपक
+Pred: दीपक
+Top-8 next-token predictions:
+  'दीपक'                    0.8041
+  'संजय'                    0.1888
+  'रमेश'                    0.0011
+  'अशोक'                    0.0010
+  'मोहन'                    0.0008
+  'नीलम'                    0.0006
+  'अमित'                    0.0006
+  'राजू'                    0.0005
+
+--- Diagnostic 2 ---
+Gold:  नीलम
+Pred: सुरेश
+Top-8 next-token predictions:
+  'सुरेश'                   0.3105
+  'दीपक'                    0.2768
+  'नीलम'                    0.2168
+  'राजू'                    0.1494
+  'सुनीता'                  0.0063
+  'रोहित'                   0.0059
+  'संजय'                    0.0055
+  'अशोक'                    0.0052
+
+--- Diagnostic 3 ---
+Gold:  राहुल
+Pred: संजय
+Top-8 next-token predictions:
+  'संजय'                    0.8572
+  'राहुल'                   0.0594
+  'सुरेश'                   0.0585
+  'रोहित'                   0.0037
+  'रमेश'                    0.0036
+  'अमित'                    0.0030
+  'दीपक'                    0.0028
+  'कविता'                   0.0021
+
+--- Diagnostic 4 ---
+Gold:  सुनीता
+Pred: सुनीता
+Top-8 next-token predictions:
+  'सुनीता'                  0.4211
+  'राजू'                    0.3871
+  'रोहित'                   0.1628
+  'विकास'                   0.0032
+  'मोहन'                    0.0029
+  'अशोक'                    0.0029
+  'राहुल'                   0.0027
+  'अमित'                    0.0027
+
+--- Diagnostic 5 ---
+Gold:  मोहन
+Pred: मोहन
+Top-8 next-token predictions:
+  'मोहन'                    0.5230
+  'अशोक'                    0.2484
+  'दीपक'                    0.0995
+  'राजू'                    0.0966
+  'रोहित'                   0.0051
+  'रमेश'                    0.0044
+  'पूजा'                    0.0034
+  'अमित'                    0.0034
+
+--- Diagnostic 6 ---
+Gold:  रोहित
+Pred: रोहित
+Top-8 next-token predictions:
+  'रोहित'                   0.9060
+  'विकास'                   0.0875
+  'मोहन'                    0.0009
+  'रमेश'                    0.0008
+  'राहुल'                   0.0007
+  'संजय'                    0.0006
+  'सुरेश'                   0.0006
+  'दीपक'                    0.0005
+
+--- Diagnostic 7 ---
+Gold:  पूजा
+Pred: रमेश
+Top-8 next-token predictions:
+  'रमेश'                    0.4823
+  'विकास'                   0.3329
+  'पूजा'                    0.1218
+  'रोहित'                   0.0307
+  'राजू'                    0.0059
+  'अशोक'                    0.0042
+  'सुरेश'                   0.0030
+  'सुनीता'                  0.0028
+
+--- Diagnostic 8 ---
+Gold:  नीलम
+Pred: नीलम
+Top-8 next-token predictions:
+  'नीलम'                    0.4053
+  'अमित'                    0.3107
+  'कविता'                   0.2569
+  'सुनीता'                  0.0055
+  'मोहन'                    0.0036
+  'सुरेश'                   0.0031
+  'पूजा'                    0.0023
+  'दीपक'                    0.0021
+
+--- Diagnostic 9 ---
+Gold:  रमेश
+Pred: अमित
+Top-8 next-token predictions:
+  'अमित'                    0.4529
+  'रमेश'                    0.4295
+  'अशोक'                    0.0920
+  'राजू'                    0.0052
+  'संजय'                    0.0031
+  'रोहित'                   0.0027
+  'सुरेश'                   0.0026
+  'राहुल'                   0.0023
+
+--- Diagnostic 10 ---
+Gold:  रोहित
+Pred: रोहित
+Top-8 next-token predictions:
+  'रोहित'                   0.4858
+  'दीपक'                    0.1842
+  'राजू'                    0.1549
+  'पूजा'                    0.1355
+  'संजय'                    0.0087
+  'सुनीता'                  0.0058
+  'अशोक'                    0.0038
+  'मोहन'                    0.0038
+
+================================================================================
+FULL TEST SET EVALUATION
+================================================================================
+Evaluating: 100%|██████████| 3000/3000 [00:34<00:00, 86.99it/s]
+
+================================================================================
+FINAL RESULTS
+================================================================================
+First-Token Accuracy : 1777/3000 (59.23%)
+Exact Match Accuracy : 1777/3000 (59.23%)
+
+--- Accuracy by Task ---
+bind_entity_to_value          : 139/139 (100.00%)
+bind_value_to_entity          : 61/144 (42.36%)
+compare_2way                  : 369/499 (73.95%)
+compare_3way                  : 670/1067 (62.79%)
+compare_4way                  : 538/1151 (46.74%)
+
+--- Accuracy by Number of Entities ---
+2-entity                 : 369/499 (73.95%)
+3-entity                 : 670/1067 (62.79%)
+4-entity                 : 538/1151 (46.74%)
+
+================================================================================
+SAMPLE FAILURES
+================================================================================
+
+[FAIL 1] Task: compare_4way
+Prompt:
+दीपक के अंक = 70
+नीलम के अंक = 79
+राजू के अंक = 76
+सुरेश के अंक = 77
+
+अधिकतम अंक अंक किसके हैं?
+उत्तर:
+Gold: नीलम
+Pred: सुरेश
+
+[FAIL 2] Task: compare_3way
+Prompt:
+संजय के पास मूल्य 35 रुपये हैं।
+राहुल के पास मूल्य 37 रुपये हैं।
+सुरेश के पास मूल्य 32 रुपये हैं।
+
+सबसे अधिक मूल्य किसका है?
+उत्तर:
+Gold: राहुल
+Pred: संजय
+
+[FAIL 3] Task: compare_4way
+Prompt:
+रोहित: 16 रुपये
+पूजा: 27 रुपये
+रमेश: 24 रुपये
+विकास: 17 रुपये
+
+सबसे अधिक मूल्य
+उत्तर:
+Gold: पूजा
+Pred: रमेश
+
+[FAIL 4] Task: compare_3way
+Prompt:
+अशोक: 23 किलोग्राम
+रमेश: 28 किलोग्राम
+अमित: 24 किलोग्राम
+
+अधिकतम वजन
+उत्तर:
+Gold: रमेश
+Pred: अमित
+
+[FAIL 5] Task: compare_3way
+Prompt:
+अमित के पास मूल्य 65 रुपये हैं।
+राजू के पास मूल्य 66 रुपये हैं।
+मोहन के पास मूल्य 63 रुपये हैं।
+
+सबसे अधिक मूल्य किसका है?
+उत्तर:
+Gold: राजू
+Pred: अमित
+
+[FAIL 6] Task: compare_4way
+Prompt:
+संजय के मूल्य = 41 रुपये
+राहुल के मूल्य = 48 रुपये
+अशोक के मूल्य = 42 रुपये
+राजू के मूल्य = 40 रुपये
+
+सबसे कम मूल्य
+उत्तर:
+Gold: राजू
+Pred: अशोक
+
+[FAIL 7] Task: compare_4way
+Prompt:
+अमित: 57
+राजू: 61
+अशोक: 63
+कविता: 56
+
+सबसे अधिक अंक किसके हैं?
+उत्तर:
+Gold: अशोक
+Pred: अमित
+
+[FAIL 8] Task: compare_4way
+Prompt:
+मोहन के उम्र 31 वर्ष हैं।
+अमित के उम्र 33 वर्ष हैं।
+रोहित के उम्र 22 वर्ष हैं।
+कविता के उम्र 32 वर्ष हैं।
+
+सबसे अधिक उम्र
+उत्तर:
+Gold: अमित
+Pred: मोहन
+
+[FAIL 9] Task: compare_3way
+Prompt:
+रोहित के पास उम्र 52 वर्ष हैं।
+विकास के पास उम्र 55 वर्ष हैं।
+राहुल के पास उम्र 57 वर्ष हैं।
+
+सबसे अधिक उम्र
+उत्तर:
+Gold: राहुल
+Pred: विकास
+
+[FAIL 10] Task: compare_4way
+Prompt:
+रमेश के पास वजन 38 किलोग्राम हैं।
+दीपक के पास वजन 45 किलोग्राम हैं।
+अशोक के पास वजन 40 किलोग्राम हैं।
+मोहन के पास वजन 44 किलोग्राम हैं।
+
+सबसे अधिक वजन
+उत्तर:
+Gold: दीपक
+Pred: रमेश
+
+[FAIL 11] Task: compare_4way
+Prompt:
+सुरेश का वजन 81 किलोग्राम है।
+अशोक का वजन 86 किलोग्राम है।
+संजय का वजन 82 किलोग्राम है।
+दीपक का वजन 85 किलोग्राम है।
+
+न्यूनतम वजन
+उत्तर:
+Gold: सुरेश
+Pred: संजय
+
+[FAIL 12] Task: compare_3way
+Prompt:
+मोहन के मूल्य = 44 रुपये
+अमित के मूल्य = 49 रुपये
+रमेश के मूल्य = 46 रुपये
+
+सबसे अधिक मूल्य किसका है?
+उत्तर:
+Gold: अमित
+Pred: मोहन
+
+[FAIL 13] Task: bind_value_to_entity
+Prompt:
+राजू के मूल्य = 33 रुपये
+दीपक का मूल्य 65 रुपये है।
+संजय के मूल्य = 58 रुपये
+
+65 रुपये किसके हैं?
+उत्तर:
+Gold: दीपक
+Pred: संजय
+
+[FAIL 14] Task: compare_4way
+Prompt:
+अमित: 57 वर्ष
+दीपक: 53 वर्ष
+संजय: 59 वर्ष
+अशोक: 51 वर्ष
+
+सबसे छोटा
+उत्तर:
+Gold: अशोक
+Pred: अमित
+
+[FAIL 15] Task: compare_4way
+Prompt:
+अमित: 53 रुपये
+दीपक: 50 रुपये
+सुरेश: 51 रुपये
+रोहित: 45 रुपये
+
+सबसे कम मूल्य किसका है?
+उत्तर:
+Gold: रोहित
+Pred: दीपक
+
+[FAIL 16] Task: compare_4way
+Prompt:
+दीपक का अंक 58 है।
+विकास का अंक 56 है।
+राजू का अंक 64 है।
+मोहन का अंक 59 है।
+
+अधिकतम अंक अंक किसके हैं?
+उत्तर:
+Gold: राजू
+Pred: दीपक
+
+[FAIL 17] Task: compare_3way
+Prompt:
+संजय: 16 वर्ष
+अशोक: 21 वर्ष
+सुरेश: 20 वर्ष
+
+सबसे अधिक उम्र किसकी है?
+उत्तर:
+Gold: अशोक
+Pred: सुरेश
+
+[FAIL 18] Task: compare_3way
+Prompt:
+अशोक का उम्र 79 वर्ष है।
+राजू का उम्र 75 वर्ष है।
+रमेश का उम्र 78 वर्ष है।
+
+सबसे कम उम्र किसकी है?
+उत्तर:
+Gold: राजू
+Pred: रमेश
+
+[FAIL 19] Task: compare_4way
+Prompt:
+सुनीता के पास उम्र 26 वर्ष हैं।
+अशोक के पास उम्र 31 वर्ष हैं।
+पूजा के पास उम्र 24 वर्ष हैं।
+रमेश के पास उम्र 22 वर्ष हैं।
+
+सबसे कम उम्र किसकी है?
+उत्तर:
+Gold: रमेश
+Pred: पूजा
+
+[FAIL 20] Task: bind_value_to_entity
+Prompt:
+नीलम का उम्र 95 वर्ष है।
+रोहित के उम्र 25 वर्ष हैं।
+राहुल: 65 वर्ष
+
+95 वर्ष किसके हैं?
+उत्तर:
+Gold: नीलम
+Pred: राहुल
+
+================================================================================
+SANITY CHECK
+================================================================================
+Overall total   : 3000
+Task total      : 3000
+Overall correct : 1777
+Task correct    : 1777
+✓ Counts are internally consistent.
+✓ Correct counts are consistent.
+✓ Accuracy is valid.
+
+================================================================================
+INTERPRETATION
+================================================================================
+Overall exact-match accuracy: 59.23%
+
+The important numbers are:
+  1. compare_2way
+  2. compare_3way
+  3. compare_4way
+  4. Accuracy by answer position
+
+If 3-way/4-way accuracy remains much lower than 2-way accuracy, the model still has a multi-entity comparison limitation.
+
+================================================================================
+V7 EVALUATION COMPLETE
+================================================================================
+
+add Codeadd Markdown
+
+add Codeadd Markdown
